@@ -62,8 +62,8 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
         
         //Set showNavBar to false if you want to hide the top bar
         //loginViewConfig.showsNavigationBar = false
-        loginViewConfig.navigationBarColor = UIColor(red: 102, green: 0, blue: 0, alpha: 1.0)
-        loginViewConfig.navigationBarTintColor = UIColor.white
+        loginViewConfig.navigationBarColor = #colorLiteral(red: 0.558098033, green: 0.1014547695, blue: 0.1667655639, alpha: 1)
+        loginViewConfig.navigationBarTintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         loginViewConfig.navigationBarFont = UIFont(name: "Adobe Caslon Pro Regular.ttf", size: 16.0)
         UserAccountManager.shared.loginViewControllerConfig = loginViewConfig
         AuthHelper.loginIfRequired {

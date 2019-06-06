@@ -3,9 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>remoteAccessConsumerKey</key>
-	<string>3MVG9Iu66FKeHhINkB1l7xt7kR8czFcCTUhgoA8Ol2Ltf1eYHOU4SqQRSEitYFDUpqRWcoQ2.dBv_a1Dyu5xa</string>
+	<string>3MVG98dostKihXN65VZ3l_hz2l.XfFWuzC31s5E.QgUbpJ5.wSZ4G6OyhxqBgBgZ49P.hrltRYprB9.TOXhR4
+</string>
 	<key>oauthRedirectURI</key>
-	<string>testsfdc:///mobilesdk/detect/oauth/done</string>
+	<string>cofcapp://</string>
 	<key>oauthScopes</key>
 	<array>
 		<string>web</string>

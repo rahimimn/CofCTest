@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		4F393A291C3C8BCD00B3EA13 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F393A281C3C8BCD00B3EA13 /* main.swift */; };
 		4FD6C47A1B754AF1002F9F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */; };
-		4FD6C49F1B755242002F9F90 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C49C1B755242002F9F90 /* RootViewController.swift */; };
-		4FD6C4A01B755242002F9F90 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6C49D1B755242002F9F90 /* InitialViewController.swift */; };
 		78A235BD93AB7D080D67CD51 /* Pods_CofCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A29C75280BDF73123F14B4 /* Pods_CofCApp.framework */; };
 		B2023ADE22A94A550042027F /* white-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B2023ADD22A94A550042027F /* white-logo.png */; };
 		B2023AE122A9512A0042027F /* Adobe Caslon Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2023AE022A9512A0042027F /* Adobe Caslon Pro Regular.ttf */; };
+		B2023AF122A988340042027F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2023AF022A988340042027F /* Storyboard.storyboard */; };
+		B2023B0022AA93660042027F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2023AFF22AA93660042027F /* Main.storyboard */; };
+		B2023B0222AA95130042027F /* ExistingStudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0122AA95130042027F /* ExistingStudentsTableViewController.swift */; };
+		B2023B0622AA98180042027F /* StudentListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0522AA98180042027F /* StudentListDataSource.swift */; };
+		B2023B0822AAA8620042027F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0722AAA8620042027F /* UIView.swift */; };
+		B2023B0D22AAAF820042027F /* StudentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0C22AAAF820042027F /* StudentDetailsTableViewController.swift */; };
+		B2023B0F22AAB36D0042027F /* ObjectLayoutDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0E22AAB36D0042027F /* ObjectLayoutDataSource.swift */; };
+		B2023B1122AABB950042027F /* CompactLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B1022AABB950042027F /* CompactLayout.swift */; };
 		B7168FBC1FACC6F900A48DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */; };
 		B77BD8A321125B510036B284 /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B77BD8A221125B510036B284 /* bootconfig.plist */; };
 		CEA8CA041F071B2300448B51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8CA031F071B2300448B51 /* Images.xcassets */; };
@@ -26,13 +32,19 @@
 		4FD6C4781B754AF1002F9F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD6C49A1B755242002F9F90 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		4FD6C49C1B755242002F9F90 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		4FD6C49D1B755242002F9F90 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4FF12F8A1DCA91F5004D9EF9 /* CofCApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CofCApp.entitlements; sourceTree = "<group>"; };
 		762732C14CFE40A989C3AD70 /* Pods-CofCApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CofCApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CofCApp/Pods-CofCApp.debug.xcconfig"; sourceTree = "<group>"; };
 		82A29C75280BDF73123F14B4 /* Pods_CofCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CofCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2023ADD22A94A550042027F /* white-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-logo.png"; sourceTree = "<group>"; };
 		B2023AE022A9512A0042027F /* Adobe Caslon Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adobe Caslon Pro Regular.ttf"; sourceTree = "<group>"; };
+		B2023AF022A988340042027F /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		B2023AFF22AA93660042027F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B2023B0122AA95130042027F /* ExistingStudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingStudentsTableViewController.swift; sourceTree = "<group>"; };
+		B2023B0522AA98180042027F /* StudentListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentListDataSource.swift; path = /Users/rahimimn/CofCApp/CofCApp/StudentListDataSource.swift; sourceTree = "<absolute>"; };
+		B2023B0722AAA8620042027F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B2023B0C22AAAF820042027F /* StudentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsTableViewController.swift; sourceTree = "<group>"; };
+		B2023B0E22AAB36D0042027F /* ObjectLayoutDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLayoutDataSource.swift; sourceTree = "<group>"; };
+		B2023B1022AABB950042027F /* CompactLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactLayout.swift; sourceTree = "<group>"; };
 		B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../mobile_sdk/SalesforceMobileSDK-iOS/shared/resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		B77BD8A221125B510036B284 /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
 		CEA8CA031F071B2300448B51 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "mobile_sdk/SalesforceMobileSDK-iOS/shared/resources/Images.xcassets"; sourceTree = SOURCE_ROOT; };
@@ -54,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				4FD6C4761B754AF1002F9F90 /* CofCApp */,
-				B2023ADF22A950710042027F /* Resources */,
 				4FD6C4751B754AF1002F9F90 /* Products */,
 				DDFDDF0A29E4BDD114B51BBC /* Pods */,
 				6B868AEB1ACA7FCA4636C7F7 /* Frameworks */,
@@ -72,9 +83,13 @@
 		4FD6C4761B754AF1002F9F90 /* CofCApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2023B0922AAAB930042027F /* Student Details */,
+				B2023AFF22AA93660042027F /* Main.storyboard */,
+				B2023AFE22AA93180042027F /* Existing Students */,
 				4FF12F8A1DCA91F5004D9EF9 /* CofCApp.entitlements */,
-				4FD6C4A11B755265002F9F90 /* Classes */,
+				4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */,
 				4FD6C4771B754AF1002F9F90 /* Supporting Files */,
+				4FD6C4A11B755265002F9F90 /* Testing Files */,
 			);
 			path = CofCApp;
 			sourceTree = "<group>";
@@ -82,8 +97,11 @@
 		4FD6C4771B754AF1002F9F90 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B77BD8A221125B510036B284 /* bootconfig.plist */,
 				B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */,
+				4FD6C49A1B755242002F9F90 /* Bridging-Header.h */,
+				4F393A281C3C8BCD00B3EA13 /* main.swift */,
+				B2023AE022A9512A0042027F /* Adobe Caslon Pro Regular.ttf */,
+				B77BD8A221125B510036B284 /* bootconfig.plist */,
 				B2023ADD22A94A550042027F /* white-logo.png */,
 				CEA8CA031F071B2300448B51 /* Images.xcassets */,
 				4FD6C4781B754AF1002F9F90 /* Info.plist */,
@@ -91,16 +109,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4FD6C4A11B755265002F9F90 /* Classes */ = {
+		4FD6C4A11B755265002F9F90 /* Testing Files */ = {
 			isa = PBXGroup;
 			children = (
-				4FD6C49A1B755242002F9F90 /* Bridging-Header.h */,
-				4FD6C49C1B755242002F9F90 /* RootViewController.swift */,
-				4FD6C49D1B755242002F9F90 /* InitialViewController.swift */,
-				4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */,
-				4F393A281C3C8BCD00B3EA13 /* main.swift */,
+				B2023AF022A988340042027F /* Storyboard.storyboard */,
 			);
-			name = Classes;
+			name = "Testing Files";
 			sourceTree = "<group>";
 		};
 		6B868AEB1ACA7FCA4636C7F7 /* Frameworks */ = {
@@ -111,13 +125,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B2023ADF22A950710042027F /* Resources */ = {
+		B2023AFE22AA93180042027F /* Existing Students */ = {
 			isa = PBXGroup;
 			children = (
-				B2023AE022A9512A0042027F /* Adobe Caslon Pro Regular.ttf */,
+				B2023B0522AA98180042027F /* StudentListDataSource.swift */,
+				B2023B0122AA95130042027F /* ExistingStudentsTableViewController.swift */,
+				B2023B0722AAA8620042027F /* UIView.swift */,
 			);
-			name = Resources;
-			path = CofCApp;
+			name = "Existing Students";
+			sourceTree = "<group>";
+		};
+		B2023B0922AAAB930042027F /* Student Details */ = {
+			isa = PBXGroup;
+			children = (
+				B2023B0C22AAAF820042027F /* StudentDetailsTableViewController.swift */,
+				B2023B0E22AAB36D0042027F /* ObjectLayoutDataSource.swift */,
+				B2023B1022AABB950042027F /* CompactLayout.swift */,
+			);
+			name = "Student Details";
 			sourceTree = "<group>";
 		};
 		DDFDDF0A29E4BDD114B51BBC /* Pods */ = {
@@ -196,11 +221,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2023B0022AA93660042027F /* Main.storyboard in Resources */,
 				B2023ADE22A94A550042027F /* white-logo.png in Resources */,
 				B77BD8A321125B510036B284 /* bootconfig.plist in Resources */,
 				CEA8CA041F071B2300448B51 /* Images.xcassets in Resources */,
 				B2023AE122A9512A0042027F /* Adobe Caslon Pro Regular.ttf in Resources */,
 				B7168FBC1FACC6F900A48DB5 /* LaunchScreen.storyboard in Resources */,
+				B2023AF122A988340042027F /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2023B0822AAA8620042027F /* UIView.swift in Sources */,
 				4FD6C47A1B754AF1002F9F90 /* AppDelegate.swift in Sources */,
-				4FD6C49F1B755242002F9F90 /* RootViewController.swift in Sources */,
+				B2023B0D22AAAF820042027F /* StudentDetailsTableViewController.swift in Sources */,
+				B2023B1122AABB950042027F /* CompactLayout.swift in Sources */,
+				B2023B0222AA95130042027F /* ExistingStudentsTableViewController.swift in Sources */,
+				B2023B0F22AAB36D0042027F /* ObjectLayoutDataSource.swift in Sources */,
 				4F393A291C3C8BCD00B3EA13 /* main.swift in Sources */,
-				4FD6C4A01B755242002F9F90 /* InitialViewController.swift in Sources */,
+				B2023B0622AA98180042027F /* StudentListDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

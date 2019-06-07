@@ -83,11 +83,12 @@
 		4FD6C4761B754AF1002F9F90 /* CofCApp */ = {
 			isa = PBXGroup;
 			children = (
-				B2023B0922AAAB930042027F /* Student Details */,
+				B2023B1222AAC5580042027F /* New Student */,
 				B2023AFF22AA93660042027F /* Main.storyboard */,
-				B2023AFE22AA93180042027F /* Existing Students */,
 				4FF12F8A1DCA91F5004D9EF9 /* CofCApp.entitlements */,
 				4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */,
+				B2023B0922AAAB930042027F /* Student Details */,
+				B2023AFE22AA93180042027F /* Existing Students */,
 				4FD6C4771B754AF1002F9F90 /* Supporting Files */,
 				4FD6C4A11B755265002F9F90 /* Testing Files */,
 			);
@@ -143,6 +144,13 @@
 				B2023B1022AABB950042027F /* CompactLayout.swift */,
 			);
 			name = "Student Details";
+			sourceTree = "<group>";
+		};
+		B2023B1222AAC5580042027F /* New Student */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Student";
 			sourceTree = "<group>";
 		};
 		DDFDDF0A29E4BDD114B51BBC /* Pods */ = {

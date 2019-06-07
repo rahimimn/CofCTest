@@ -12,16 +12,31 @@ import SalesforceSDKCore
 class ExistingStudentsTableViewController: UITableViewController {
 
     
-    private let dataSource = StudentListDataSource(soqlQuery: "SELECT LastName, FirstName, Email, BannerId, StartTerm, AnticipatedMajor FROM Student", cellReuseIdentifier: "StudentPrototype") {record, cell in
-        let lastName = record["LastName"] as? String ?? ""
-        let firstName = record["FirstName"] as? String ?? ""
-        cell.textLabel?.text = lastName
-        cell.textLabel?.text = firstName
+    /// Used by the storyboard to unwind other scenes back
+    /// to this view controller.
+    ///
+    /// Fetches new data whenever a new claim is submitted.
+    ///
+    /// - Parameter segue: The segue to unwind.
+//    @IBAction func unwindFromNewStudent(segue: UIStoryboardSegue) {
+//        let newStudentViewController = segue.source as! NewStudentViewController
+//        if newStudentViewController.wasSubmitted {
+//            dataSource.fetchData()
+//        }
+//    }
+
+    
+    private let dataSource = StudentListDataSource(soqlQuery: "SELECT Name, TargetX_SRMb__BannerID__c FROM Contact", cellReuseIdentifier: "StudentPrototype") { record, cell in
+        let name = record["Name"] as? String ?? ""
+        let  studentId = record["TargetX_SRMb__BannerID__c"] as? String ?? ""
+        
+        cell.textLabel?.text = name
+        cell.detailTextLabel?.text = "Contact ID: \(studentId)"
     }
     
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource.delegate = self as? StudentListDataSourceDelegate
+        self.dataSource.delegate = self
         self.tableView.delegate = self
         self.tableView.activityIndicatorView.startAnimating()
         self.tableView.dataSource = self.dataSource
@@ -29,12 +44,26 @@ class ExistingStudentsTableViewController: UITableViewController {
         refreshControl?.addTarget(self.dataSource, action: #selector(self.dataSource.fetchData), for: UIControl.Event.valueChanged)
         self.tableView.addSubview(refreshControl!)
         self.dataSource.fetchData()
-        
     }
-  
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "ViewStudentDetails"{
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewStudentDetails" {
             let destination = segue.destination as! StudentDetailsTableViewController
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tableView.indexPath(for: cell)!
+            if let studentID = self.dataSource.records[indexPath.row]["Id"] as? String {
+                destination.studentID = studentID
+            }
+        }
+    }
+}
+
+extension ExistingStudentsTableViewController: StudentListDataSourceDelegate {
+    func studentListDataSourceDidUpdateRecords(_ dataSource: StudentListDataSource) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+            self.tableView.activityIndicatorView.stopAnimating()
         }
     }
 }

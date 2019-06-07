@@ -18,11 +18,12 @@ class StudentDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let bannerID = studentID {
+            
             self.dataSource = ObjectLayoutDataSource(objectType: "Student", objectId: bannerID, cellReuseIdentifier: self.reuseIdentifier) { field, cell in
                 cell.textLabel?.text = field.value
                 cell.detailTextLabel?.text = field.label
             }
-            self.dataSource.delegate = self as? ObjectLayoutDataSourceDelegate
+            self.dataSource.delegate = self
             self.tableView.delegate = self
             self.tableView.activityIndicatorView.startAnimating()
             self.tableView.dataSource = dataSource

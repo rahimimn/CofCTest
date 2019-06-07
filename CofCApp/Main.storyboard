@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="AGn-Zl-I1i" kind="show" identifier="ViewClaimDetails" id="Tdx-sz-VUZ"/>
+                                    <segue destination="AGn-Zl-I1i" kind="show" identifier="ViewStudentDetails" id="Tdx-sz-VUZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -113,7 +113,7 @@
         <!--New Student-->
         <scene sceneID="gfb-Fw-fvV">
             <objects>
-                <viewController title="New Student" id="rgt-1S-Cp5" customClass="NewClaimViewController" customModule="Redwoods_Project" sceneMemberID="viewController">
+                <viewController title="New Student" id="rgt-1S-Cp5" customClass="NewClaimViewController" customModule="CofCApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YHV-Ev-OjZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

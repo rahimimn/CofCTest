@@ -25,7 +25,7 @@ class ExistingStudentsTableViewController: UITableViewController {
 //        }
 //    }
 
-    
+    //these are the fields that are being pulled from the server
     private let dataSource = StudentListDataSource(soqlQuery: "SELECT Name, TargetX_SRMb__BannerID__c FROM Contact", cellReuseIdentifier: "StudentPrototype") { record, cell in
         let name = record["Name"] as? String ?? ""
         let  studentId = record["TargetX_SRMb__BannerID__c"] as? String ?? ""
@@ -51,7 +51,7 @@ class ExistingStudentsTableViewController: UITableViewController {
             let destination = segue.destination as! StudentDetailsTableViewController
             let cell = sender as! UITableViewCell
             let indexPath = self.tableView.indexPath(for: cell)!
-            if let studentID = self.dataSource.records[indexPath.row]["Id"] as? String {
+            if let studentID = self.dataSource.records[indexPath.row]["TargetX_SRMb__BannerID__c"] as? String {
                 destination.studentID = studentID
             }
         }

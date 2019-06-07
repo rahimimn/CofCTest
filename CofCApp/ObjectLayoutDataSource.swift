@@ -115,6 +115,8 @@ class ObjectLayoutDataSource: NSObject {
                     SalesforceLogger.e(type(of: self), message: "Missing \(objectType) object type in response.")
                     return
                 }
+                print("Decoding JSON.......")
+                print(decodedJSON)
                 
                 // The layout contains a list of fields (`fieldItems`), each of which
                 // has an array of layout components, where the `value` of the layout

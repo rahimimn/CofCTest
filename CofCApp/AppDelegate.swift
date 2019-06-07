@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         // Uncomment following block to enable IDP Login flow
-        // return  UserAccountManager.sharedInstance().handleIDPAuthenticationResponse(url, options: options)
+        //return  UserAccountManager.sharedInstance().handleIDPAuthenticationResponse(url, options: options)
         return false
     }
     

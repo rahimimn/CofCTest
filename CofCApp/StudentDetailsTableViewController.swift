@@ -19,7 +19,7 @@ class StudentDetailsTableViewController: UITableViewController {
         super.viewDidLoad()
         if let bannerID = studentID {
             
-            self.dataSource = ObjectLayoutDataSource(objectType: "Student", objectId: bannerID, cellReuseIdentifier: self.reuseIdentifier) { field, cell in
+            self.dataSource = ObjectLayoutDataSource(objectType: "Contact", objectId: bannerID, cellReuseIdentifier: self.reuseIdentifier) { field, cell in
                 cell.textLabel?.text = field.value
                 cell.detailTextLabel?.text = field.label
             }

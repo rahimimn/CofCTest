@@ -20,6 +20,7 @@
 		B2023B0D22AAAF820042027F /* StudentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0C22AAAF820042027F /* StudentDetailsTableViewController.swift */; };
 		B2023B0F22AAB36D0042027F /* ObjectLayoutDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B0E22AAB36D0042027F /* ObjectLayoutDataSource.swift */; };
 		B2023B1122AABB950042027F /* CompactLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B1022AABB950042027F /* CompactLayout.swift */; };
+		B2023B1422AE9C5B0042027F /* New StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2023B1322AE9C5B0042027F /* New StudentViewController.swift */; };
 		B7168FBC1FACC6F900A48DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */; };
 		B77BD8A321125B510036B284 /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B77BD8A221125B510036B284 /* bootconfig.plist */; };
 		CEA8CA041F071B2300448B51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8CA031F071B2300448B51 /* Images.xcassets */; };
@@ -45,6 +46,7 @@
 		B2023B0C22AAAF820042027F /* StudentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsTableViewController.swift; sourceTree = "<group>"; };
 		B2023B0E22AAB36D0042027F /* ObjectLayoutDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLayoutDataSource.swift; sourceTree = "<group>"; };
 		B2023B1022AABB950042027F /* CompactLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactLayout.swift; sourceTree = "<group>"; };
+		B2023B1322AE9C5B0042027F /* New StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "New StudentViewController.swift"; sourceTree = "<group>"; };
 		B7168FBB1FACC6F900A48DB5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../mobile_sdk/SalesforceMobileSDK-iOS/shared/resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		B77BD8A221125B510036B284 /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
 		CEA8CA031F071B2300448B51 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "mobile_sdk/SalesforceMobileSDK-iOS/shared/resources/Images.xcassets"; sourceTree = SOURCE_ROOT; };
@@ -83,10 +85,10 @@
 		4FD6C4761B754AF1002F9F90 /* CofCApp */ = {
 			isa = PBXGroup;
 			children = (
-				B2023B1222AAC5580042027F /* New Student */,
 				B2023AFF22AA93660042027F /* Main.storyboard */,
 				4FF12F8A1DCA91F5004D9EF9 /* CofCApp.entitlements */,
 				4FD6C4791B754AF1002F9F90 /* AppDelegate.swift */,
+				B2023B1222AAC5580042027F /* New Student */,
 				B2023B0922AAAB930042027F /* Student Details */,
 				B2023AFE22AA93180042027F /* Existing Students */,
 				4FD6C4771B754AF1002F9F90 /* Supporting Files */,
@@ -149,6 +151,7 @@
 		B2023B1222AAC5580042027F /* New Student */ = {
 			isa = PBXGroup;
 			children = (
+				B2023B1322AE9C5B0042027F /* New StudentViewController.swift */,
 			);
 			name = "New Student";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				B2023B0822AAA8620042027F /* UIView.swift in Sources */,
 				4FD6C47A1B754AF1002F9F90 /* AppDelegate.swift in Sources */,
+				B2023B1422AE9C5B0042027F /* New StudentViewController.swift in Sources */,
 				B2023B0D22AAAF820042027F /* StudentDetailsTableViewController.swift in Sources */,
 				B2023B1122AABB950042027F /* CompactLayout.swift in Sources */,
 				B2023B0222AA95130042027F /* ExistingStudentsTableViewController.swift in Sources */,

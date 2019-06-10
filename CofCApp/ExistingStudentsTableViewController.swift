@@ -26,12 +26,12 @@ class ExistingStudentsTableViewController: UITableViewController {
 //    }
 
     //these are the fields that are being pulled from the server
-    private let dataSource = StudentListDataSource(soqlQuery: "SELECT Name, TargetX_SRMb__BannerID__c FROM Contact", cellReuseIdentifier: "StudentPrototype") { record, cell in
+    private let dataSource = StudentListDataSource(soqlQuery: "SELECT Name, TargetX_SRMb__BannerID__c, Id FROM Contact", cellReuseIdentifier: "StudentPrototype") { record, cell in
         let name = record["Name"] as? String ?? ""
         let  studentId = record["TargetX_SRMb__BannerID__c"] as? String ?? ""
         
         cell.textLabel?.text = name
-        cell.detailTextLabel?.text = "Contact ID: \(studentId)"
+        cell.detailTextLabel?.text = "Student ID: \(studentId)"
     }
     
     override func viewDidLoad() {
@@ -46,12 +46,15 @@ class ExistingStudentsTableViewController: UITableViewController {
         self.dataSource.fetchData()
     }
     
+    //checks if the view's identifier is "ViewStudentDetails, and if it is, sets the next view controller, and then uses an ID to manipulate data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewStudentDetails" {
             let destination = segue.destination as! StudentDetailsTableViewController
             let cell = sender as! UITableViewCell
             let indexPath = self.tableView.indexPath(for: cell)!
-            if let studentID = self.dataSource.records[indexPath.row]["TargetX_SRMb__BannerID__c"] as? String {
+            if let studentID =
+                //uses an external id to determine which object fields to return
+                self.dataSource.records[indexPath.row]["Id"] as? String {
                 destination.studentID = studentID
             }
         }

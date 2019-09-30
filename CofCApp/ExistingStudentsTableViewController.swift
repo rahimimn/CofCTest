@@ -11,19 +11,7 @@ import SalesforceSDKCore
 
 class ExistingStudentsTableViewController: UITableViewController {
 
-    
-    /// Used by the storyboard to unwind other scenes back
-    /// to this view controller.
-    ///
-    /// Fetches new data whenever a new claim is submitted.
-    ///
-    /// - Parameter segue: The segue to unwind.
-//    @IBAction func unwindFromNewStudent(segue: UIStoryboardSegue) {
-//        let newStudentViewController = segue.source as! NewStudentViewController
-//        if newStudentViewController.wasSubmitted {
-//            dataSource.fetchData()
-//        }
-//    }
+
 
     //these are the fields that are being pulled from the server
     private let dataSource = StudentListDataSource(soqlQuery: "SELECT Name, TargetX_SRMb__BannerID__c, Id FROM Contact", cellReuseIdentifier: "StudentPrototype") { record, cell in
@@ -44,6 +32,20 @@ class ExistingStudentsTableViewController: UITableViewController {
         refreshControl?.addTarget(self.dataSource, action: #selector(self.dataSource.fetchData), for: UIControl.Event.valueChanged)
         self.tableView.addSubview(refreshControl!)
         self.dataSource.fetchData()
+    }
+    
+    
+    /// Used by the storyboard to unwind other scenes back
+    /// to this view controller.
+    ///
+    /// Fetches new data whenever a new student is submitted.
+    ///
+    /// - Parameter segue: The segue to unwind.
+    @IBAction func unwindFromNewStudent(segue: UIStoryboardSegue) {
+        let newStudentViewController = segue.source as! NewStudentViewController
+        if newStudentViewController.wasSubmitted {
+            dataSource.fetchData()
+        }
     }
     
     //checks if the view's identifier is "ViewStudentDetails, and if it is, sets the next view controller, and then uses an ID to manipulate data

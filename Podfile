@@ -3,6 +3,7 @@ platform :ios, '11.0'
 project 'CofCApp.xcodeproj'
 target 'CofCApp' do
 
+source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
